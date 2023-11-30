@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:controller="com.example.pb.PbController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="656.0" prefWidth="496.0" style="-fx-background-color: #deebff; -fx-padding: 3px;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-spacing: 50px;">
+         <children>
+            <Button fx:id="addButton" onAction="#handleAddButton" mnemonicParsing="false" prefHeight="37.0" prefWidth="109.0" style="-fx-background-color: #267cff;" text="ДОДАТИ" textFill="#deebff">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="editButton" onAction="#handleEditButton" mnemonicParsing="false" prefHeight="37.0" prefWidth="123.0" style="-fx-background-color: #267cff;" text="РЕДАГУВАТИ" textFill="#deebff">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="deleteButton" onAction="#handleDeleteButton" mnemonicParsing="false" prefHeight="37.0" prefWidth="109.0" style="-fx-background-color: #267cff;" text="ВИДАЛИТИ" textFill="#deebff">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-spacing: 50px;">
+         <children>
+            <TextField fx:id="userTextField" prefHeight="36.0" prefWidth="225.0" promptText="Дані про користувача" style="-fx-background-color: deebff; -fx-border-color: #267cff; -fx-border-width: 2px; -fx-border-radius: 7px;" />
+            <Button fx:id="searchButton" onAction="#handleSearchButton" mnemonicParsing="false" prefHeight="37.0" prefWidth="109.0" style="-fx-background-color: #267cff;" text="ПОШУК" textFill="#deebff">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <VBox alignment="CENTER" prefHeight="400.0" prefWidth="568.0" style="-fx-padding: 25px;">
+         <children>
+            <TableView fx:id="tableView" prefHeight="362.0" prefWidth="535.0" style="-fx-background-color: #deebff; -fx-border-color: #267cff; -fx-border-radius: 7px; -fx-border-width: 2px; -fx-max-width: 600;">
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+         </children>
+      </VBox>
+      <HBox alignment="CENTER" prefHeight="28.0" prefWidth="568.0">
+         <children>
+            <Text fx:id="recordCountText" fill="#267cff" strokeType="OUTSIDE" strokeWidth="0.0" text="Кількість записів в таблиці:" textAlignment="CENTER" wrappingWidth="320.1103515625">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+            <Text fill="#267cff" strokeType="OUTSIDE" strokeWidth="0.0" text="Кількість запис" textAlignment="CENTER" visible="false" wrappingWidth="244.1103515625">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+   </children>
+</VBox>
